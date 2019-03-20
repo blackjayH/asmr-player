@@ -1,0 +1,148 @@
+body {
+	margin: 0px;
+	margin: 40px;
+	background: url("Img/bg.jpg") no-repeat center center fixed;
+	background-size: width:100%;
+	height: auto;
+	font-family: 'Nanum Pen Script', cursive;
+	font-size: 150%;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.login {
+	position: relative;
+	margin: 10% auto;
+	width: 280px;
+	padding: 33px 25px 29px;
+	background-color: rgba(60, 93, 150, 0.3);
+	border-radius: 5px;
+}
+
+.checkButton {
+	position: relative;
+	align-content: center;
+	font-size: 20px;
+	text-align: center;
+	background-color: rgba(60, 93, 150, 0.2);
+	border-radius: 30px;
+	border: 2px solid #23FFC4;
+	padding: 10px;
+	width: 180px;
+	margin-bottom: 10px;
+	margin-top: -10px;
+	margin-left: 15%;
+}
+
+.checkButton:hover {
+	background-color: rgba(60, 93, 150, 0.9);
+}
+
+.checkButton:active {
+	top: 1px;
+}
+
+.loginTitle {
+	margin: -25px -25px 25px;
+	padding: 15px 25px;
+	line-height: 35px;
+	font-size: 50px;
+	color: #23FFC4;
+	text-align: center;
+	background-color: rgba(60, 93, 150, 0.3);
+}
+
+input {
+	font-family: inherit;
+	color: #23FFC4;
+	box-sizing: border-box;
+}
+
+a {
+	font-family: inherit;
+	color: #23FFC4;
+	cursor: default;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+btn {
+	padding: 30px
+}
+
+.loginInput {
+	width: 100%;
+	height: 50px;
+	margin-bottom: 25px;
+	padding: 0 15px 2px;
+	font-size: 30px;
+	color: white;
+	background-color: rgba(11, 11, 11, 0.5);
+	border: 2px solid #EBEBEB;
+	border-radius: 4px;
+}
+
+.loginInput:focus {
+	border-color: #62C2E4;
+	outline: none;
+}
+
+.loginInput2 {
+	width: 100%;
+	height: 50px;
+	margin-bottom: 25px;
+	padding: 0 15px 2px;
+	font-size: 30px;
+	color: white;
+	background-color: rgba(11, 11, 11, 0.5);
+	border: 2px solid #EBEBEB;
+	border-radius: 4px;
+}
+
+.loginInput2:focus {
+	border-color: #62C2E4;
+	outline: none;
+}
+
+.submitButton {
+	position: static;
+	width: 40%;
+	height: 45px;
+	font-size: 20px;
+	text-align: center;
+	background-color: rgba(60, 93, 150, 0.2);
+	border: 2px solid #23FFC4;
+	border-radius: 30px;
+}
+
+.submitButton:hover {
+	background-color: rgba(60, 93, 150, 0.9);
+}
+
+.linkButton {
+	align-content: center;
+	font-size: 20px;
+	text-align: center;
+	background-color: rgba(60, 93, 150, 0.2);
+	border-radius: 30px;
+	border: 2px solid #23FFC4;
+	padding: 10px;
+	padding-left: 22px;
+	padding-right: 22px;
+}
+
+.linkButton:hover {
+	background-color: rgba(60, 93, 150, 0.9);
+}
+
+.linkButton:active {
+	top: 1px;
+}
+
+.submitButton:active {
+	top: 1px;
+}
