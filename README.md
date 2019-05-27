@@ -1,4 +1,4 @@
-# team project : asmr player(17.12) 3주 4Person
+# team project : asmr player(17.12) 3주 4People
 - JSP + Servlet중심의 web app
 - Ajax + MySQL + JS + CSS
 
