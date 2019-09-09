@@ -1,12 +1,11 @@
 package WebProject;
 
-import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.ArrayList;
 
-import WebProject.AudioDTO;
+import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.Statement;
 
 public class AudioDAO {
 	private String jdbc_dirver = "com.mysql.jdbc.Driver";
@@ -17,8 +16,8 @@ public class AudioDAO {
 	private void connect() { // DB 연결
 		try {
 			Class.forName(jdbc_dirver);
-			conn = DriverManager.getConnection(jdbc_url, "root", "wldnrwldnr1");
-			stme = conn.createStatement();
+			conn = (Connection) DriverManager.getConnection(jdbc_url, "root", "wldnrwldnr1");
+			stme = (Statement) conn.createStatement();
 		} catch (Exception e) {
 		}
 	}
@@ -92,18 +91,19 @@ public class AudioDAO {
 			ResultSet rs = stme.executeQuery(sql);
 			while (rs.next()) {
 				if (rs.getString("Id").equals(id)) {
-						return false;
-					}
+					return false;
+				}
 			}
-			
+
 			rs.close();
 			disconnect();
 		} catch (Exception e) {
 		}
 
 		return true;
-		
+
 	}
+
 	public boolean CheckLogin(String id, String pass) { // 로그인 확인
 		String sql = "select Id , pass from A_User ";
 		try {
@@ -127,7 +127,7 @@ public class AudioDAO {
 	public ArrayList<AudioDTO> getAllData(String id, int slot) { // 모든 재생목록 가져오기
 		// TODO Auto-generated method stub
 		String sql = "select Track , Volume from Audio where Id='" + id + "' and Slot =" + slot;
-	//	System.out.println(sql);
+		// System.out.println(sql);
 		ArrayList<AudioDTO> list = new ArrayList<AudioDTO>();
 		try {
 			connect();
@@ -136,7 +136,7 @@ public class AudioDAO {
 				AudioDTO data = new AudioDTO();
 				float temp = rs.getFloat("Volume");
 				String temps = String.format("%.1f", temp);
-			//	System.out.println(Float.parseFloat(temps));
+				// System.out.println(Float.parseFloat(temps));
 				data.setAudioNum(rs.getInt("Track"));
 				data.setVolume(Float.parseFloat(temps));
 				list.add(data);
