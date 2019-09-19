@@ -31,8 +31,6 @@ public class AudioDAO {
 	}
 
 	public void addID(AudioDTO data) { // 회원가입
-		// TODO Auto-generated method stub
-
 		String sql = "insert into A_User value('" + data.getId() + "', '" + data.getPass() + "')";
 		try {
 			connect();
@@ -43,8 +41,6 @@ public class AudioDAO {
 	}
 
 	public void addAudio(AudioDTO data) { // 재생목록 추가
-		// TODO Auto-generated method stub
-
 		String sql = "insert into Audio value('" + data.getId() + "', '" + data.getSlot() + "', '" + data.getAudioNum()
 				+ "', '" + data.getVolume() + "')";
 		System.out.println(sql);
@@ -57,7 +53,6 @@ public class AudioDAO {
 	}
 
 	public void removeAudio(String id, int slot) { // 재생목록 제거
-
 		String sql = "delete from Audio where Id ='" + id + "' and" + " Slot = " + slot;
 		try {
 			connect();
@@ -68,7 +63,6 @@ public class AudioDAO {
 	}
 
 	public AudioDTO getData(String id, int slot) { // 재생목록 불러오기
-		// TODO Auto-generated method stub
 		String sql = "select Track , Volume from Audio where Slot=" + slot + ", Id =" + id;
 		AudioDTO data = new AudioDTO();
 		try {
@@ -94,7 +88,6 @@ public class AudioDAO {
 					return false;
 				}
 			}
-
 			rs.close();
 			disconnect();
 		} catch (Exception e) {
@@ -146,8 +139,6 @@ public class AudioDAO {
 
 		} catch (Exception e) {
 		}
-
 		return list;
 	}
-
 }
